@@ -6,8 +6,11 @@ import {
     CardMedia,
     Divider,
     Button,
-    Typography
+    Typography,
+    IconButton
 } from "@mui/material";
+
+import { Favorite } from "@mui/icons-material";
 
 import "./styles.css";
 
@@ -51,8 +54,11 @@ export default function Products() {
                     <Divider/>
                     <div style={{display: 'flex', marginTop: 10, justifyContent: 'space-between'}}>
                         <Typography>R$ {props.valor}</Typography>
-
-                        <Button onClick={() => addProduto(props.nome, props.valor)} align="right" variant="contained" color="success">Add</Button>
+                        <div align="right">
+                            <Button onClick={() => addProduto(props.nome, props.valor)} variant="contained" color="success">Add</Button>
+                            <IconButton onClick={() => addProduto(props.nome, props.valor)} variant="contained" color="success"><Favorite/></IconButton>
+                            
+                        </div>
                     </div>
                 </CardContent>
             </Card>
@@ -72,3 +78,9 @@ export default function Products() {
         </div>
     )
 }
+
+{/* <div align="right">
+    <IconButton onClick={() => addProduto(props.nome, props.valor)} aria-label="Favorito" component="label" color="warning" size="large"><StarBorder/></IconButton>
+    <IconButton onClick={() => favProduto(props.nome, props.valor)} color="success" size="large"><Add/></IconButton>
+</div>
+    <IconButton onClick={() => favProduto(props.nome, props.valor)} color="success" size="large"><Add/></IconButton>  */}
