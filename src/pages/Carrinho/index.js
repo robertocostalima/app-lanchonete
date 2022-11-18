@@ -21,7 +21,7 @@ export default function Carrinho()
                 // );
             });
     }, []);
-
+    
     return (
         <div align="center">
             <h1> 
