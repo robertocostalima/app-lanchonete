@@ -39,6 +39,19 @@ export default function Products() {
         alert('Pronto');
     };
 
+    const favoriteProduto = (nome, valor) => {
+        fetch('http://localhost:8000/favoritos', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                nome: nome,
+                valor: valor
+            })
+        });
+
+        alert('Pronto');
+    };
+
     const CadaProduto = (props) => {
         return (
             <Card style={{marginTop: '10px'}}>
@@ -56,7 +69,7 @@ export default function Products() {
                         <Typography>R$ {props.valor}</Typography>
                         <div align="right">
                             <Button onClick={() => addProduto(props.nome, props.valor)} variant="contained" color="success">Add</Button>
-                            <IconButton onClick={() => addProduto(props.nome, props.valor)} variant="contained" color="success"><Favorite/></IconButton>
+                            <IconButton onClick={() => favoriteProduto(props.nome, props.valor)} variant="contained" color="success"><Favorite/></IconButton>
                             
                         </div>
                     </div>
@@ -78,9 +91,3 @@ export default function Products() {
         </div>
     )
 }
-
-{/* <div align="right">
-    <IconButton onClick={() => addProduto(props.nome, props.valor)} aria-label="Favorito" component="label" color="warning" size="large"><StarBorder/></IconButton>
-    <IconButton onClick={() => favProduto(props.nome, props.valor)} color="success" size="large"><Add/></IconButton>
-</div>
-    <IconButton onClick={() => favProduto(props.nome, props.valor)} color="success" size="large"><Add/></IconButton>  */}

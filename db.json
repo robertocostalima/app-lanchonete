@@ -29,6 +29,18 @@
       "valor": 12.9,
       "quantidade": 1,
       "id": 5
+    },
+    {
+      "nome": "Pizza",
+      "valor": 29.9,
+      "quantidade": 1,
+      "id": 6
+    },
+    {
+      "nome": "Pizza",
+      "valor": 29.9,
+      "quantidade": 1,
+      "id": 7
     }
   ],
   "produtos": [
@@ -43,6 +55,13 @@
       "nome": "Pratinho Gourmet",
       "valor": 12.9,
       "foto": "https://img.itdg.com.br/tdg/images/blog/uploads/2022/07/5-itens-necessarios-para-se-tornar-um-pizzaiolo-neste-Dia-da-Pizza.jpg?mode=crop&width={:width=%3E150,%20:height=%3E130}"
+    }
+  ],
+  "favoritos": [
+    {
+      "nome": "Pratinho Gourmet",
+      "valor": 12.9,
+      "id": 1
     }
   ]
 }
